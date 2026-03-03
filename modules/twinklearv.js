@@ -68,7 +68,7 @@ Twinkle.arv.callback = function (uid, isIP, isTA) {
 	categories.append({
 		type: 'option',
 		label: 'Anonieme gebruiker',
-		value: 'ipblok',
+		value: 'tablok',
 		disabled: !(isTA || isIP)
 	});
 	categories.append({
@@ -191,7 +191,7 @@ Twinkle.arv.callback.changeCategory = function (e) {
 			old_area.parentNode.replaceChild(work_area, old_area);
 			break;
 
-		case 'ipblok':
+		case 'tablok':
 			work_area = new Morebits.quickForm.element({
 				type: 'field',
 				label: 'Rapporteer anonieme gebruiker',
@@ -349,8 +349,8 @@ Twinkle.arv.callback.evaluate = function(e) {
 			});
 			break;
 
-		// WP:IPBLOK
-		case 'ipblok':
+		// WP:TABLOK
+		case 'tablok':
 			types = form.getChecked('arvtype');
 			if (!types.length && comment === '') {
 				alert('Je moet een reden aanvinken of opgeven');
@@ -392,10 +392,10 @@ Twinkle.arv.callback.evaluate = function(e) {
 			Morebits.simpleWindow.setButtonsEnabled(false);
 			Morebits.status.init(form);
 
-			Morebits.wiki.actionCompleted.redirect = 'Wikipedia:Verzoekpagina voor moderatoren/IPBlok';
+			Morebits.wiki.actionCompleted.redirect = 'Wikipedia:Verzoekpagina voor moderatoren/TABlok';
 			Morebits.wiki.actionCompleted.notice = 'Rapporteren voltooid';
 
-			aivPage = new Morebits.wiki.page('Wikipedia:Verzoekpagina voor moderatoren/IPBlok', 'IPBlok verzoek verwerken');
+			aivPage = new Morebits.wiki.page('Wikipedia:Verzoekpagina voor moderatoren/TABlok', 'TABlok verzoek verwerken');
 			aivPage.setPageSection(2); // Geteld vanaf boven
 			aivPage.setFollowRedirect(true);
 

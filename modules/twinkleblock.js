@@ -352,7 +352,7 @@ Twinkle.block.callback.change_action = function twinkleblockCallbackChangeAction
 			Twinkle.block.blockPresetsInfo.prior.templateName = Morebits.string.isInfinity(Twinkle.block.currentBlockInfo.expiry) ? 'uw-pblockindef' : 'uw-pblock';
 		} else {
 			if (!Twinkle.block.isRegistered) {
-				Twinkle.block.blockPresetsInfo.prior.templateName = 'ipblok';
+				Twinkle.block.blockPresetsInfo.prior.templateName = 'tablok';
 			} else {
 				Twinkle.block.blockPresetsInfo.prior.templateName = Morebits.string.isInfinity(Twinkle.block.currentBlockInfo.expiry) ? 'permblok' : 'blok';
 			}
